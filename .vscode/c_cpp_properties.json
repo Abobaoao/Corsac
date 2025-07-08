@@ -4,22 +4,22 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Qt/6.8.2/mingw_64/include",
-                "C:/Qt/6.8.2/mingw_64/include/QtCore",
-                "C:/Qt/6.8.2/mingw_64/include/QtGui",
-                "C:/Qt/6.8.2/mingw_64/include/QtWidgets"
+                "C:/Qt/6.9.1/mingw_64/include",
+                "C:/Qt/6.9.1/mingw_64/include/QtCore",
+                "C:/Qt/6.9.1/mingw_64/include/QtGui",
+                "C:/Qt/6.9.1/mingw_64/include/QtWidgets"
             ],
             "defines": [],
-            "compilerPath": "C:/Inside/Qt/Tools/mingw1310_64/bin/g++.exe",  
+            "compilerPath": "C:/Qt/mingw/mingw32/bin/g++.exe",  
             "cStandard": "c11",
             "cppStandard": "c++17",  
             "intelliSenseMode": "gcc-x64",
             "browse": {
                 "path": [
-                    "C:/Qt/6.8.2/mingw_64/include",
-                    "C:/Qt/6.8.2/mingw_64/include/QtCore",
-                    "C:/Qt/6.8.2/mingw_64/include/QtGui",
-                    "C:/Qt/6.8.2/mingw_64/include/QtWidgets"
+                    "C:/Qt/6.9.1/mingw_64/include",
+                    "C:/Qt/6.9.1/mingw_64/include/QtCore",
+                    "C:/Qt/6.9.1/mingw_64/include/QtGui",
+                    "C:/Qt/6.9.1/mingw_64/include/QtWidgets"
                 ],
                 "limitSymbolsToIncludedHeaders": true
             }
