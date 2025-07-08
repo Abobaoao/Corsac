@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Corsac.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\Corsac.dir/objects.a @CMakeFiles\Corsac.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\c++.exe -mwindows -Wl,--whole-archive CMakeFiles\Corsac.dir/objects.a -Wl,--no-whole-archive -o Corsac.exe -Wl,--out-implib,libCorsac.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Corsac.dir\linkLibs.rsp

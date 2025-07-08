@@ -1,0 +1,4 @@
+-DWIN32
+-o
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/build/aboba/console/moc_ConsoleLog.cpp
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/aboba/console/ConsoleLog.h

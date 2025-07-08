@@ -1,0 +1,4 @@
+-DWIN32
+-o
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/build/aboba/console/moc_CommandSuggestion.cpp
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/aboba/console/CommandSuggestion.h

@@ -1,0 +1,3 @@
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/build/CMakeFiles/Corsac.dir
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/build/CMakeFiles/edit_cache.dir
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+-DWIN32
+-o
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/build/aboba/tabs/moc_AboutTab.cpp
+C:/Inside/Aboba/ProjectsCode/VSC/Flip/aboba/tabs/AboutTab.h
