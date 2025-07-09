@@ -28,7 +28,7 @@ void ToggleSwitch::paintEvent(QPaintEvent*) {
     p.setRenderHint(QPainter::Antialiasing);
 
     // фон
-    QColor bg = m_checked ? QColor("#ffffff") : QColor("#222222");
+    QColor bg = m_checked ? QColor("#ffffff") : QColor("#000000");
     QColor knob = m_checked ? QColor("#000000") : QColor("#ffffff");
 
     p.setBrush(bg);

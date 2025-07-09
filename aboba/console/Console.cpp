@@ -8,14 +8,12 @@
 #include <QFontDatabase>
 
 Console::Console(QWidget *parent) : ConsoleDisplay(parent) {
-    // Инициализация компонентов
     logManager = new ConsoleLog("console_log.txt");
     inputHandler = new CommandInput();
     m_suggestionWidget = new QListWidget(this);
     m_suggestionWidget->setAttribute(Qt::WA_ShowWithoutActivating);
     m_suggestions = new CommandSuggestion(m_suggestionWidget);
 
-    // Первоначальный вывод
     QString version = "0.1";
     printMessage(
         QString("<span style='color:#ffd633'>Author:</span> <span style='color:White'>Corsac</span> | ")
@@ -48,9 +46,7 @@ void Console::printMessage(const QString &message, MessageType type) {
             styledMessage = QString("<span style='color:#f0f0f0'>%1</span>").arg(message);
             break;
     }
-    // Removed invalid method call as setDragEnabled is not defined for QTextEdit or its parent classes.
     setAcceptDrops(false);
-    // Вызываем метод базового класса
     ConsoleDisplay::printMessage(styledMessage);
     moveCursor(QTextCursor::End);
 }
@@ -63,11 +59,8 @@ void Console::prompt() {
 }
 
 void Console::keyPressEvent(QKeyEvent *event) {
-    // Обработка подсказок (стрелки, Tab)
-
     QTextCursor cursor = textCursor();
 
-    // Обработка Ctrl+C
     if (event->matches(QKeySequence::Copy)) {
         if (cursor.hasSelection()) {
             QApplication::clipboard()->setText(toPlainText());
@@ -77,34 +70,29 @@ void Console::keyPressEvent(QKeyEvent *event) {
     }
 
     if (event->matches(QKeySequence::Paste)) {
-        QString clipboardText = QApplication::clipboard()->text(); // Получаем текст из буфера обмена
+        QString clipboardText = QApplication::clipboard()->text(); 
 
-        // Проверяем, находится ли выделение за пределами редактируемой области
         if (cursor.hasSelection()) {
             int selStart = cursor.selectionStart();
             int selEnd = cursor.selectionEnd();
 
-            // Если выделение затрагивает область вне редактируемой зоны
             if (selStart < promptPosition) {
-                // Ограничиваем выделение только редактируемой областью
                 cursor.setPosition(qMax(selStart, promptPosition), QTextCursor::MoveAnchor);
                 cursor.setPosition(selEnd, QTextCursor::KeepAnchor);
                 setTextCursor(cursor);
             }
         }
 
-        // Убедимся, что вставка происходит в редактируемой области
         if (cursor.position() < promptPosition) {
             moveCursor(QTextCursor::End);
         }
 
-        cursor.insertText(clipboardText); // Вставляем текст без форматирования
+        cursor.insertText(clipboardText); 
         setTextCursor(cursor);
         event->accept();
         return;
     }
 
-    // Коррекция ввода: если ввод вне редактируемой области, перемещаем курсор
     if (!event->text().isEmpty()) {
         bool hasSelection = cursor.hasSelection();
         int selStart = cursor.selectionStart();
@@ -137,7 +125,6 @@ void Console::keyPressEvent(QKeyEvent *event) {
         }
     }
 
-    // Обработка Backspace и Delete
     if (event->key() == Qt::Key_Backspace || event->key() == Qt::Key_Delete) {
         bool hasSelection = cursor.hasSelection();
         int selStart = cursor.selectionStart();
@@ -164,7 +151,6 @@ void Console::keyPressEvent(QKeyEvent *event) {
         return;
     }
 
-    // Если клавиша для ввода текста, проверяем позицию курсора
     if (!event->text().isEmpty()) {
         if (cursor.position() < promptPosition) {
             event->ignore();

@@ -1,4 +1,4 @@
-// BaseTab.h
+
 #pragma once
 #include <QWidget>
 

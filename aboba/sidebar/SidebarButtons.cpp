@@ -14,7 +14,7 @@ SidebarButtons::SidebarButtons(QWidget *parent) : QWidget(parent) {
     footerLabel->setStyleSheet("color: #1f1f1f; font-size: 12px;");
     layout->addStretch();
     QFont font = footerLabel->font();
-    font.setStretch(120); // 100 — норм, 110 — растянут
+    font.setStretch(120); 
     footerLabel->setFont(font);
     layout->addWidget(footerLabel);
 }
@@ -32,14 +32,14 @@ QPushButton* SidebarButtons::addButton(const QString &text, int yPos, const QStr
     button->setFixedSize(180, 40);
     button->move((width() - 180) / 2, yPos);
 
-    // Создаем контейнер для содержимого кнопки
+    
     QWidget *contentWidget = new QWidget(button);
     contentWidget->setStyleSheet("background: transparent;");
     QHBoxLayout *contentLayout = new QHBoxLayout(contentWidget);
-    contentLayout->setContentsMargins(3, 0, 0, 0); // Левый отступ 10px
-    contentLayout->setSpacing(10); // Расстояние между иконкой и текстом 5px
+    contentLayout->setContentsMargins(3, 0, 0, 0); 
+    contentLayout->setSpacing(10); 
 
-    // Добавляем иконку
+    
     if (!iconPath.isEmpty()) {
         QLabel *iconLabel = new QLabel(contentWidget);
         QPixmap pixmap(iconPath);
@@ -47,19 +47,19 @@ QPushButton* SidebarButtons::addButton(const QString &text, int yPos, const QStr
         contentLayout->addWidget(iconLabel);
     }
 
-    // Добавляем текст
+    
     QLabel *textLabel = new QLabel(text, contentWidget);
     textLabel->setFont(customFont);
     textLabel->setStyleSheet("color: white;");
     contentLayout->addWidget(textLabel);
     contentLayout->addStretch();
 
-    // Центрируем контейнер в кнопке
+    
     QHBoxLayout *btnLayout = new QHBoxLayout(button);
     btnLayout->addWidget(contentWidget);
     btnLayout->setAlignment(Qt::AlignLeft);
 
-    // Стилизация кнопки
+    
     button->setStyleSheet(R"(
         
         QPushButton:hover {

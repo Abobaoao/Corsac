@@ -43,7 +43,6 @@ class CleanItemDelegate : public QStyledItemDelegate {
             QRect rect = opt.rect.adjusted(0, 0, 1, 1);
             QPainterPath path;
             
-            // Корректное создание скруглений через QRectF
             if (isFirst && isLast) {
                 path.addRoundedRect(QRectF(rect), radius, radius);
             } 
@@ -67,10 +66,8 @@ class CleanItemDelegate : public QStyledItemDelegate {
                 path.addRect(rect);
             }
     
-            // Заливка фона
             painter->fillPath(path, QColor("#000000"));
             
-            // Выделение
             QString textToDraw = opt.text;
             int offsetX = 8;
             if (opt.state & QStyle::State_Selected) {
@@ -79,11 +76,10 @@ class CleanItemDelegate : public QStyledItemDelegate {
             painter->fillPath(path, QColor("#101010"));
             }
     
-            // Текст
             painter->setPen(Qt::white);
             QFontMetrics fm(opt.font);
             int textHeight = fm.height();
-            int textY = rect.top() + (rect.height() - textHeight) / 2 + fm.ascent();  // центр по высоте
+            int textY = rect.top() + (rect.height() - textHeight) / 2 + fm.ascent();  
 
             painter->drawText(QPoint(rect.left() + offsetX, textY), textToDraw);
         }

@@ -31,7 +31,7 @@ private:
     QTimer* hoverTimer_ = nullptr;
     ButtonAnimationState animationState_;
     
-    // Константы анимации
+    
     static constexpr int kButtonHoverAnimationDuration = 200;
     static constexpr int kHoverDelay = 100;
     static constexpr int kButtonRadius = 20;

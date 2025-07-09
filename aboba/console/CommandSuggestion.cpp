@@ -2,7 +2,7 @@
 #include <QPoint>
 #include <QWidget>
 #include <QDebug>
-#include <algorithm> // Убедитесь, что этот заголовок подключен для std::min
+#include <algorithm> 
 
 
 
@@ -15,7 +15,7 @@ CommandSuggestion::CommandSuggestion(QListWidget *widget)
     m_widget->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     m_widget->setAttribute(Qt::WA_TranslucentBackground);
     m_widget->setContentsMargins(0, 0, 0, 0);
-    m_widget->setWindowFlags(Qt::SubWindow); // Изменяем флаг на дочернее окно
+    m_widget->setWindowFlags(Qt::SubWindow);
     m_widget->setParent(nullptr);
     
     
@@ -34,7 +34,6 @@ void CommandSuggestion::updateSuggestions(const QString &prefix, const QStringLi
             filtered << cmd;
     }
 
-    // Сортируем по алфавиту
     std::sort(filtered.begin(), filtered.end(), [](const QString &a, const QString &b) {
         return a.toLower() < b.toLower();
     });
@@ -71,7 +70,7 @@ void CommandSuggestion::updateGhostText(const QString &prefix, const QStringList
 
     for (const QString &cmd : filteredCommands) {
         QListWidgetItem *item = new QListWidgetItem(cmd);
-        item->setTextAlignment(Qt::AlignVCenter);  // Выравнивание по вертикали
+        item->setTextAlignment(Qt::AlignVCenter); 
         m_widget->addItem(item);
     }
 }

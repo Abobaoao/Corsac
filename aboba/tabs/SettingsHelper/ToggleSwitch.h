@@ -3,7 +3,7 @@
 #include <QPropertyAnimation>
 
 class ToggleSwitch : public QWidget {
-    Q_OBJECT  // ← ВОТ ЭТО ОБЯЗАТЕЛЬНО!
+    Q_OBJECT  
 
     Q_PROPERTY(qreal offset READ offset WRITE setOffset)
 
