@@ -1,4 +1,4 @@
-// Console.h
+
 #ifndef CONSOLE_H
 #define CONSOLE_H
 
@@ -59,4 +59,4 @@ private:
     void updateGhostText();
 };
 
-#endif // CONSOLE_H
+#endif 

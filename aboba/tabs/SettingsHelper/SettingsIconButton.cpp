@@ -76,7 +76,7 @@ void SettingsIconButton::animateHover(bool entering) {
 }
 
 void SettingsIconButton::performHoverAnimation(bool entering) {
-    // Очистка предыдущих анимаций
+    
     if (animationState_.glowAnimation) {
         animationState_.glowAnimation->stop();
         delete animationState_.glowAnimation;

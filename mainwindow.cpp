@@ -43,11 +43,11 @@ MainWindow::MainWindow(QWidget *parent)
     menuButton->setFixedSize(35, 30);
     QPixmap menuPixmap("C:/Inside/Aboba/ProjectsCode/VSC/Flip/resources/linemenu.png");
     menuButton->setIcon(QIcon(menuPixmap));
-    menuButton->setIconSize(QSize(40, 25)); //размер кнопки
+    menuButton->setIconSize(QSize(40, 25)); 
     menuButton->setStyleSheet(
         "QPushButton { background-color: black; border: none; outline: none; }"
         "QPushButton:focus { outline: none; }"
-        "QPushButton:hover { background-color: rgba(56, 56, 56, 1); border-radius: 5px; }" // Цветrgb(56, 56, 56) с 50% прозрачностью и округление углов
+        "QPushButton:hover { background-color: rgba(56, 56, 56, 1); border-radius: 5px; }" 
     );
     int menuButtonY = (panel->height() - menuButton->height()) / 2;
     menuButton->move(logoLabel->geometry().right() + 3, menuButtonY);
@@ -71,7 +71,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     QPixmap closePixmap("C:/Inside/Aboba/ProjectsCode/VSC/Flip/resources/cross.png");
     closeButton->setIcon(QIcon(closePixmap));
-    closeButton->setIconSize(QSize(30, 30)); // Размер иконки
+    closeButton->setIconSize(QSize(30, 30)); 
 
     closeButton->setFocusPolicy(Qt::NoFocus);
     closeButton->setStyleSheet(
@@ -184,7 +184,7 @@ bool MainWindow::eventFilter(QObject *watched, QEvent *event)
                 sidebarAnim->hideSidebar();
                 stackedWidget->setCurrentWidget(consoleContainer);
                 stackedWidget->setGeometry(0, 40, width(), height() - 40);
-                return true; // Блокируем дальнейшую обработку
+                return true; 
             }
         }
     }

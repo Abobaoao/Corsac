@@ -11,7 +11,7 @@
 #include <QGraphicsScene>
 #include <QTimer>
 #include <vector>
-#include <QRandomGenerator> // Добавляем этот include
+#include <QRandomGenerator> 
 #include <QtMath> 
 #include <QStackedWidget>
 #include "aboba/console/Console.h"
@@ -23,7 +23,7 @@
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT // Не забудь этот макрос для использования сигналов и слотов
+    Q_OBJECT 
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
@@ -48,4 +48,4 @@ private:
     QLabel *titleLabel;
 };
 
-#endif // MAINWINDOW_H
+#endif 

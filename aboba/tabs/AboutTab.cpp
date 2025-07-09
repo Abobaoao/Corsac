@@ -1,4 +1,4 @@
-// AboutTab.cpp
+
 #include "AboutTab.h"
 #include <QLabel>
 #include <QWidget>

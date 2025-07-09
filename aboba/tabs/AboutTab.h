@@ -1,4 +1,4 @@
-// AboutTab.h
+
 #pragma once
 #include "BaseTab.h"
 #include <QFont>

@@ -38,7 +38,7 @@ QHBoxLayout* SettingsSectionWidget::createSettingItem(const SettingItem& setting
     textLayout->addWidget(titleLabel);
     textLayout->addWidget(descLabel);
     
-    auto* toggle = new ToggleSwitch(); // заменяем чекбокс
+    auto* toggle = new ToggleSwitch(); 
     if (setting.enabled)
         toggle->setChecked(setting.enabled);
 

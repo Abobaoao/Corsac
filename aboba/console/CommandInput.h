@@ -6,7 +6,7 @@
 
 class CommandInput {
 public:
-    CommandInput() = default; // Явное объявление конструктора по умолчанию
+    CommandInput() = default; 
     QString processCommand(const QString &command);
     QStringList availableCommands() const;
 };

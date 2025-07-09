@@ -1,4 +1,4 @@
-// ConsoleDisplay.cpp
+
 #include "ConsoleDisplay.h"
 #include <QFontDatabase>
 #include <QTextCursor>
@@ -8,13 +8,13 @@ ConsoleDisplay::ConsoleDisplay(QWidget *parent) : QTextEdit(parent) {
 }
 
 void ConsoleDisplay::initialize() {
-    // Загрузка шрифта
+    
     int fontId = QFontDatabase::addApplicationFont("C:/Inside/Aboba/ProjectsCode/VSC/Flip/fonts/FiraCode-Regular.ttf");
     QFont firaFont("Fira Code");
     firaFont.setPointSize(12);
     setFont(firaFont);
 
-    // Стилизация
+    
     setStyleSheet(R"(
         QTextEdit {
             background-color: #0d0d0d;

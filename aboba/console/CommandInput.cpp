@@ -7,7 +7,7 @@ QString CommandInput::processCommand(const QString &command) {
     } else if (command.startsWith("echo ")) {
         return command.mid(5);
     } else if (command == "clear") {
-        return "";  // Сигнал для очистки консоли
+        return "";  
     } else {
         return "Unknown command";
     }

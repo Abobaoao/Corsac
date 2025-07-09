@@ -23,7 +23,7 @@ private:
     QHBoxLayout* createSettingItem(const SettingItem& setting);
     QHBoxLayout* createDivider();
     
-    // Константы
+    
     static constexpr int kMargin = 20;
     static constexpr int kMainSpacing = 16;
     static constexpr int kSectionSpacing = 0;

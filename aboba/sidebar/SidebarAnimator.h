@@ -21,11 +21,11 @@ private:
     int m_targetWidth;
     bool m_visible;
     
-    // Анимационные элементы
+    
     QGraphicsOpacityEffect *m_opacityEffect;
     QPropertyAnimation *m_geometryAnimation;
     QPropertyAnimation *m_opacityAnimation;
     QParallelAnimationGroup *m_animationGroup;
 };
 
-#endif // SIDEBARANIMATOR_H
+#endif 

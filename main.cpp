@@ -8,12 +8,12 @@
 #include <QPropertyAnimation>
 #include <QRandomGenerator>
 
-// Создаем подкласс QSplashScreen, игнорирующий события мыши
+
 class CustomSplashScreen : public QSplashScreen {
 public:
     using QSplashScreen::QSplashScreen;
 protected:
-    void mousePressEvent(QMouseEvent*) override {} // Игнорируем клики
+    void mousePressEvent(QMouseEvent*) override {} 
 };
 
 int main(int argc, char *argv[])
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     mainWindow.setWindowOpacity(0.0);
     mainWindow.show();
 
-    // Используем кастомный сплэш-скрин
+    
     CustomSplashScreen *loadingWindow = new CustomSplashScreen();
     loadingWindow->setPixmap(QPixmap(900, 600));
     loadingWindow->setStyleSheet("background-color: black;");
@@ -42,26 +42,26 @@ int main(int argc, char *argv[])
     corsacmainLabel->setGraphicsEffect(logomainEffect);
 
     QPropertyAnimation *shadowAnim = new QPropertyAnimation(logomainEffect, "color");
-    shadowAnim->setDuration(500);  // Время анимации (1 секунда)
+    shadowAnim->setDuration(500);  
 
-    // Таймер для цикличности анимации
+    
     QTimer *colorChangeTimer = new QTimer();
-    colorChangeTimer->setInterval(1000);  // Интервал в 2 секунды (цвет меняется каждые 2 секунды)
+    colorChangeTimer->setInterval(1000);  
 
     QObject::connect(colorChangeTimer, &QTimer::timeout, [&]() {
         if (logomainEffect->color() == QColor(255, 255, 255, 120)) {
-            // Анимируем изменение цвета на непрозрачный
+            
             shadowAnim->setStartValue(QColor(255, 255, 255, 120));
             shadowAnim->setEndValue(QColor(255, 255, 255, 255));
         } else {
-            // Анимируем изменение цвета на прозрачный
+            
             shadowAnim->setStartValue(QColor(255, 255, 255, 255));
             shadowAnim->setEndValue(QColor(255, 255, 255, 120));
         }
-        shadowAnim->start();  // Запуск анимации
+        shadowAnim->start();  
     });
 
-    // Запуск таймера
+    
     colorChangeTimer->start();
 
     QLabel *consoleLabel = new QLabel(loadingWindow);

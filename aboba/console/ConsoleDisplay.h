@@ -1,4 +1,4 @@
-// ConsoleDisplay.h
+
 #ifndef CONSOLEDISPLAY_H
 #define CONSOLEDISPLAY_H
 
@@ -14,4 +14,4 @@ protected:
     void initialize();
 };
 
-#endif // CONSOLEDISPLAY_H
+#endif 

@@ -10,7 +10,7 @@
                 "C:/Qt/6.9.1/mingw_64/include/QtWidgets"
             ],
             "defines": [],
-            "compilerPath": "C:/Qt/mingw/mingw32/bin/g++.exe",  
+            "compilerPath": "C:\\Qt\\Tools\\mingw1310_64\\bin/g++.exe",  
             "cStandard": "c11",
             "cppStandard": "c++17",  
             "intelliSenseMode": "gcc-x64",

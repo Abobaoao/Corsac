@@ -30,7 +30,7 @@ private:
     QToolButton* btnPlugins_ = nullptr;
     int originalSearchWidth_ = 0;
     
-    // Константы
+    
     static constexpr int kGlassHeight = 120;
     static constexpr int kInputHeight = 40;
     static constexpr int kMargin = 20;
