@@ -27,7 +27,7 @@ SettingsSectionWidget::SettingsSectionWidget(const QString& title,
 
 QHBoxLayout* SettingsSectionWidget::createSettingItem(const SettingItem& setting) {
     auto* layout = new QHBoxLayout();
-    
+    layout->setContentsMargins(0, 0, 20, 0);
     auto* textLayout = new QVBoxLayout();
     auto* titleLabel = new QLabel(setting.title);
     auto* descLabel = new QLabel(setting.description);
