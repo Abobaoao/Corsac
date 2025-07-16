@@ -9,7 +9,7 @@ SidebarButtons::SidebarButtons(QWidget *parent) : QWidget(parent) {
     setAttribute(Qt::WA_StyledBackground, true);
     initializeStyle();
 
-    QLabel *footerLabel = new QLabel("Corsac 0.1", this);
+    QLabel *footerLabel = new QLabel("Corsac 0.1 (Beta)", this);
     footerLabel->setAlignment(Qt::AlignCenter);
     footerLabel->setStyleSheet("color: #1f1f1f; font-size: 12px;");
     layout->addStretch();
